@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 300px; margin: 0; padding: 16px; font: 14px/1.4 system-ui, sans-serif; color: #1f2a33; }
+    button { font: inherit; cursor: pointer; }
+    #save { width: 100%; padding: 10px; border: 0; border-radius: 6px; background: #1d5c63; color: #fff; font-weight: 600; }
+    #save:disabled { opacity: .6; cursor: default; }
+    #msg { min-height: 1.4em; margin: 8px 0; color: #66727b; }
+    #msg.error { color: #b3361f; }
+    details { margin-top: 8px; border-top: 1px solid #d5dbd6; padding-top: 8px; }
+    label { display: block; margin: 8px 0 2px; font-size: 12px; color: #66727b; }
+    input { width: 100%; padding: 6px 8px; border: 1px solid #d5dbd6; border-radius: 4px; font: inherit; }
+    #apply { margin-top: 8px; padding: 4px 10px; }
+  </style>
+</head>
+<body>
+  <button id="save">Save this page</button>
+  <div id="msg" role="status" aria-live="polite"></div>
+  <details>
+    <summary>Server settings</summary>
+    <label for="server">Server URL</label>
+    <input id="server" type="url" placeholder="http://localhost:3000">
+    <label for="token">API token (if set on the server)</label>
+    <input id="token" type="password">
+    <button id="apply">Save settings</button>
+  </details>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

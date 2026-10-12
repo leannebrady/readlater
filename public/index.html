@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadLater</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Reading list</h1>
+    <form id="add" autocomplete="off">
+      <input id="url" type="url" placeholder="Paste a link to save" aria-label="Article URL" required>
+      <button type="submit">Save link</button>
+    </form>
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <div class="bar">
+      <nav id="tabs" aria-label="Views">
+        <button data-view="next" aria-current="true">Read next</button>
+        <button data-view="unread">Unread</button>
+        <button data-view="read">Finished</button>
+        <button data-view="all">All</button>
+      </nav>
+      <input id="q" type="search" placeholder="Search saved articles" aria-label="Search">
+    </div>
+    <p id="tagbar" hidden><span id="tagname"></span> <button id="cleartag">Clear tag</button></p>
+
+    <ul id="list"></ul>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
